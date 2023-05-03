@@ -18,6 +18,15 @@
 			"dependsOn": [
 				"docker-build"
 			],
+			"dockerRun": {
+				"volumes": [
+					{
+						"localPath": "${workspaceFolder}/app",
+						"containerPath": "/app",
+						"consistency": "cached"
+					}
+				]
+			},
 			"python": {
 				"args": [
 					"runserver",
